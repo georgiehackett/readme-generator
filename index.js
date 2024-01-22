@@ -3,7 +3,7 @@ const path = require('path');
 const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown");
 
-// array of questions for user
+
 const questions = [
     // prompt for project title which will be displayed as the title of the README
     {
@@ -63,13 +63,20 @@ const questions = [
     },
 ];
 
+const promptUser = () => {
+    // Pass questions through inquirer prompt method
+    return inquirer.prompt(questions);    
+}
+
+promptUser();
+
+
 // function to write README file
 function writeToFile(fileName, data) {
 }
 
 // function to initialize program
 function init() {
-
 }
 
 // function call to initialize program
