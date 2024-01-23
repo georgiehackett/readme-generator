@@ -72,9 +72,13 @@ const promptUser = () => {
 
 // function to write README file
 function writeToFile(fileName, data) {
-    readmeData = generateMarkdown(data);
+    const readmeData = generateMarkdown(data);
     console.log(readmeData);
-    // fs.writeFile(fileName.md, readmeData);
+
+    // console.log(path.join(__dirname, fileName));
+    const filePath = path.join(__dirname, fileName)
+    
+    
 }
 
 
