@@ -62,8 +62,8 @@ const questions = [
   },
 ];
 
-const generateREADME = (answers) => {
-};
+// const generateREADME = (answers) => {
+// };
 
 const promptUser = () => {
   // Pass questions through inquirer prompt method
@@ -72,7 +72,11 @@ const promptUser = () => {
 
 // function to write README file
 function writeToFile(fileName, data) {
+    readmeData = generateMarkdown(data);
+    console.log(readmeData);
+    // fs.writeFile(fileName.md, readmeData);
 }
+
 
 // function to initialize program
 const init = async () => {
@@ -80,7 +84,9 @@ const init = async () => {
   try {
     const answers = await promptUser();
 
-    const readme = generateREADME(answers);
+    // const readme = generateREADME(answers);
+
+    await writeToFile('README.md', answers)
   } catch (err) {
     console.log(err);
   }
