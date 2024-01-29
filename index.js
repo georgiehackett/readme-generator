@@ -78,6 +78,15 @@ function writeToFile(fileName, data) {
     // console.log(path.join(__dirname, fileName));
     const filePath = path.join(__dirname, fileName)
     
+    fs.writeFile(filePath, readmeData, (err) => {
+      if (err) {
+        console.log(err);
+      } else {
+        console.log('File written successfully!');
+        console.log("The written has the following contents:");
+        console.log(fs.readFileSync(filePath, "utf8"));
+      }
+    })
     
 }
 
