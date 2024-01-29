@@ -62,8 +62,24 @@ const questions = [
   },
 ];
 
-// const generateREADME = (answers) => {
-// };
+const licenseBadges = [
+  {
+    license: "MIT",
+    badge: "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)",
+  },
+  {
+    license: "APACHE 2.0",
+    badge: "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)",
+  },
+  {
+    license: "GPL 3.0",
+    badge: "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)"
+  },
+  {
+    license: "BSD 3",
+    badge: "[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)",
+  },
+]
 
 const promptUser = () => {
   // Pass questions through inquirer prompt method
@@ -75,7 +91,6 @@ function writeToFile(fileName, data) {
     const readmeData = generateMarkdown(data);
     console.log(readmeData);
 
-    // console.log(path.join(__dirname, fileName));
     const filePath = path.join(__dirname, fileName)
     
     fs.writeFile(filePath, readmeData, (err) => {
@@ -93,11 +108,8 @@ function writeToFile(fileName, data) {
 
 // function to initialize program
 const init = async () => {
-  // console.log('hello');
   try {
     const answers = await promptUser();
-
-    // const readme = generateREADME(answers);
 
     await writeToFile('README.md', answers)
   } catch (err) {
