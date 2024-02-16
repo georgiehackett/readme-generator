@@ -3,29 +3,6 @@ const path = require("path");
 const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown");
 
-// const licenseOptions = [
-//   {
-//     license: "MIT",
-//     badge:
-//       "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)",
-//   },
-//   {
-//     license: "APACHE 2.0",
-//     badge:
-//       "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)",
-//   },
-//   {
-//     license: "GPL 3.0",
-//     badge:
-//       "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)",
-//   },
-//   {
-//     license: "BSD 3",
-//     badge:
-//       "[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)",
-//   },
-// ];
-
 const questions = [
   // prompt for project title which will be displayed as the title of the README
   {

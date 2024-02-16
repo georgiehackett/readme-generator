@@ -19,23 +19,28 @@ const licenseOptions = [
     badge:
       "[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)",
   },
+  {
+    license: "None",
+    badge: "",
+  },
 ];
-
 
 // function to generate markdown for README
 function generateMarkdown(data) {
 
-  const [license] = licenseOptions.filter((license) => license.license === data.license);
+  const [license] = licenseOptions.filter(
+    (license) => license.license === data.license
+  );
 
   return `# ${data.title}
 
   ## Description
   ${data.description}
 
-  ## License
-  ${license.badge}  
-  This application is covered under the ${data.license} license.
-
+  ## License  
+  ${license.badge ? `${license.badge}  
+  This application is covered under the ${data.license} license` : `This application is not covered by a license`}
+  
   ## Table of Contents
   1. [Description](#description)
   2. [Installation](#installation)
