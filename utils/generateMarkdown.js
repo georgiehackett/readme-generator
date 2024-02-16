@@ -1,13 +1,40 @@
+const licenseOptions = [
+  {
+    license: "MIT",
+    badge:
+      "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)",
+  },
+  {
+    license: "APACHE 2.0",
+    badge:
+      "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)",
+  },
+  {
+    license: "GPL 3.0",
+    badge:
+      "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)",
+  },
+  {
+    license: "BSD 3",
+    badge:
+      "[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)",
+  },
+];
+
+
 // function to generate markdown for README
 function generateMarkdown(data) {
-  console.log(data.license);
+
+  const [license] = licenseOptions.filter((license) => license.license === data.license);
+
   return `# ${data.title}
 
   ## Description
   ${data.description}
 
   ## License
-  ${data.license}
+  ${license.badge}  
+  This application is covered under the ${data.license} license.
 
   ## Table of Contents
   1. [Description](#description)
@@ -31,7 +58,7 @@ function generateMarkdown(data) {
   ${data.tests}
 
   ## Questions
-  If you have any questions you can contact me at ${data.email} or ${data.username}
+  If you have any questions you can contact me at ${data.email} or find me on [github](https://github.com/${data.username})
 `;
 }
 
