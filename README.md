@@ -35,7 +35,7 @@ Enter `$ node index.js` in the terminal to start the application. Once you have 
 
 The app's functionality should resemble the following:
 
-![demo](./utils/assets/images/readme-generator-demo-gif.gif)
+![demo](./utils/assets/images/readme-generator-demo-gif-updated.gif)
 
 ## Questions
 
