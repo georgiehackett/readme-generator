@@ -2,9 +2,7 @@
 
 ## Description
 
-A command-line application to dynamically generate a high-quality, professional README.md file from the user's input.
-
-The application will be invoked by using the following command:
+A command-line application that dynamically generates a high-quality, professional README.md file from the user's input. 
 
 ## License
 
