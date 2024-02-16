@@ -51,7 +51,7 @@ function generateMarkdown(data) {
   7. [Questions](#questions)
 
   ## Installation
-  ${data.installation}
+  To install dependencies, run ${data.installation}
 
   ## Usage
   ${data.usage}
@@ -60,7 +60,7 @@ function generateMarkdown(data) {
   ${data.contributing}
 
   ## Tests
-  ${data.tests}
+  To run tests for this application, run ${data.tests}
 
   ## Questions
   If you have any questions you can contact me at ${data.email} or find me on [github](https://github.com/${data.username})
